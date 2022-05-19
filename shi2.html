@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script type="text/javascript">
+    str = document.getElementById("typev").value;
+        x = document.getElementById("typev").innerHTML;
+    obj = document.getElementById("type");
+    for(i=0;i<obj.length;i++){
+        if(obj[i].value==str)
+            obj[i].selected = true;
+            obj[i] = "9";
+    }
+        
+    </script>
+<style>
+    
+</style>
+<body>
+    <select id="type" name="type"type="text" >
+        <option id ="type1"value="5" title="9">1</option>
+        <option id ="type2" value="2">2</option>
+        <option id ="type3" value="3">3</option>
+        <option id ="type4" value="4">4</option>
+        <option id ="type5" value="5">5</option>
+    </select>
+    <input type="hidden" id="typev" value="$!{list.type}"/>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/loginform.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="switch-menu clearfix">
+                <div class="left"  id="radio1" onclick="radio1()" style="border-bottom: solid 3px black;">
+                    密码登录
+                </div>
+                <div class="right" id="radio2" onclick="radio2()">
+                    短信登录
+                </div>
+            </div>
+            <script>
+                function radio1() {
+                        let a = document.getElementById("radio1");
+                        a.style.borderBottom = "solid 3px black";
+                        let b = document.getElementById("radio2");
+                        b.style.borderBottom = "none";
+                        document.getElementById("img1").src = "/pic/用户.png";
+                        document.getElementById("img2").src = "/pic/密码.png";
+                        document.getElementById("input1").style.padding="1px 2px 1px 50px";
+                        document.getElementById("input1").placeholder = "会员名/邮箱/手机号";
+                        document.getElementById("password1").placeholder = "请输入登录密码";
+                        document.getElementById("codeword").style.display = "none";
+                        document.getElementById("beselected").style.display = "none";
+                        document.getElementById("a1").style.display = "inline-block";
+                        document.getElementById("a2").style.display = "inline-block";
+                    }
+                function radio2() {
+                    let a = document.getElementById("radio1");
+                    a.style.borderBottom = "none";
+                    let b = document.getElementById("radio2");
+                    b.style.borderBottom = "solid 3px black";
+                    document.getElementById("img1").src = "/pic/手机.png";
+                    document.getElementById("img2").src = "/pic/验证码.png";
+                    document.getElementById("input1").style.padding="1px 2px 1px 100px";
+                    document.getElementById("input1").placeholder = "请输入手机号";
+                    document.getElementById("password1").placeholder = "请输入验证码";
+                    document.getElementById("codeword").style.display = "block";
+                    document.getElementById("beselected").style.display = "block";
+                    document.getElementById("a1").style.display = "none";
+                    document.getElementById("a2").style.display = "none";
+                }
+                function codeChange() {
+                    document.getElementById("qrcode-box1").style.display = "block";
+                    document.getElementById("radio1").style.display = "none";
+                    document.getElementById("radio2").style.display = "none";
+                    document.getElementById("code-box").style.display = "none";
+                    document.getElementById("form").style.display = "none";
+                    document.getElementById("a1").style.display = "none";
+                    document.getElementById("a2").style.display = "none";
+                    document.getElementById("a3").style.display = "none";
+                }
+                function returncode() {
+                    document.getElementById("qrcode-box1").style.display = "none";
+                    document.getElementById("radio1").style.display = "block";
+                    document.getElementById("radio2").style.display = "block";
+                    document.getElementById("code-box").style.display = "block";
+                    document.getElementById("form").style.display = "block";
+                    document.getElementById("a1").style.display = "inline-block";
+                    document.getElementById("a2").style.display = "inline-block";
+                    document.getElementById("a3").style.display = "inline-block";
+                }
+            </script>
+
+            <div class="qrcode-box" id="qrcode-box1">
+                <i>
+                    手机扫码，安全登录
+                </i>
+                <img src="/pic/returncode.png" alt="#" id="return" onclick="returncode()">
+                <img src="/pic/logincode.png" alt="#" class="img-code">
+                <div class="scanbox">
+                    <img src="/pic/扫一扫.png" alt="">
+                    <div class="linkbox">
+                        <div class="txt1">打开</div>
+                        <a href="https://mpage.taobao.com/hd/download.html"  target="_blank">淘宝app</a>
+                        <span>丨</span>
+                        <a href="https://www.tmall.com/wow/portal/act/app-download?mmstat=pc_login"  target="_blank">天猫app</a>
+                        <div>扫一扫登录</div>
+                    </div>
+                    <a href="https://register.tmall.com/?f=login" class="last1"  target="_blank">免费注册</a><a href="#" onclick="returncode()" class="last2">密码登录</a>
+                </div>
+            </div>
+
+            <div class="form" id="form">
+                <div class="form-item1">
+                    <img src="/pic/用户.png" alt id="img1">
+                    <select class="number-selected" id="beselected">
+                        <option value="" class="option1">+86</option>
+                        <option value="" class="option1">+8   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+84   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+83   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+866   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                        <option value="" class="option1">+86   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国大路</option>
+                      </select>
+                    <input type="text" placeholder="会员名/邮箱/手机号" id="input1">
+                </div>
+
+                <div class="form-item2">
+                    <img src="/pic/密码.png" alt id="img2">
+                    <input type="password" placeholder="请输入登录密码" id="password1">
+                    <a href="#" id="codeword" class="a4">获取验证码</a>
+                </div>
+
+                <div>
+                    <button disabled class="btn">登录</button>
+                </div>
+            </div>
+
+            <div class="code-box" id="code-box">
+                <div class="title">
+                    扫码登录更安全
+                </div>
+                <div class="icode">
+                    <img src="pic/code.png" alt="" id="codelogin" onclick="codeChange()">
+                </div>
+            </div>
+
+            <div class="loginbottom">
+                <a href="https://passport.taobao.com/ac/password_find.htm?from_site=0&lang=zh_CN&app_name=tmall&tracelog=signin_main_pass"  target="_blank" id="a1" class="a1" style="display: inline-block;">忘记密码</a>
+                <a href="https://passport.taobao.com/ac/nick_find.htm?from_site=0&lang=zh_CN&app_name=tmall"  target="_blank" id="a2" class="a2" style="display: inline-block;">忘记用户名</a>
+                <a href="https://register.tmall.com/?f=login" id="a3" class="a3" style="display: inline-block;"  target="_blank">免费注册</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
